@@ -1,0 +1,14 @@
+package day2;
+
+public class typeCasting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double d = 200.25;
+		int a = (int)d;
+		System.out.println("d = "+d);
+		System.out.println("a = "+a);
+
+	}
+
+}
