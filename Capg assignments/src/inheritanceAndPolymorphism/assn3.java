@@ -83,6 +83,40 @@ abstract class WrittenItem extends Item
 	public void setAuthor(String author) {
 		this.author = author;
 	}
+
+	@Override
+	public String toString() {
+		return "WrittenItem [author=" + author + "]";
+	}
+	
+}
+class Book extends WrittenItem
+{
+
+	public Book(int id, String title, int copies, String author) {
+		super(id, title, copies, author);
+		// TODO Auto-generated constructor stub
+	}
+	
+}
+class JournalPaper extends WrittenItem
+{
+	private int year;
+	public JournalPaper(int id, String title, int copies, String author, int year) {
+		super(id, title, copies, author);
+		this.year = year;
+	}
+	
+	
+}
+abstract class MediaItem extends Item
+{
+
+	public MediaItem(int id, String title, int copies) {
+		super(id, title, copies);
+		// TODO Auto-generated constructor stub
+	}
+	
 }
 public class assn3 {
 
