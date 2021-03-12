@@ -1,4 +1,4 @@
-package lambdaExpressions;
+package random;
 import java.util.*;
 @FunctionalInterface
 interface Authenticate

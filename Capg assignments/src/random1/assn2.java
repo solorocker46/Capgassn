@@ -1,4 +1,4 @@
-package fileHandling;
+package random1;
 import java.io.*;
 import java.util.*;
 public class assn2 {
