@@ -11,15 +11,15 @@ class ValidateName
 {
 	void validate(String fname, String lname)
 	{
-		if(fname.isBlank() && lname.isBlank())
+		if(fname.isEmpty() && lname.isEmpty())
 		{
 			throw new NameException("First name and last name cannot be blank");
 		}
-		else if(lname.isBlank())
+		else if(lname.isEmpty())
 		{
 			throw new NameException("Last name cannot be blank");
 		}
-		else if(fname.isBlank())
+		else if(fname.isEmpty())
 		{
 			throw new NameException("First name cannot be blank");
 		}

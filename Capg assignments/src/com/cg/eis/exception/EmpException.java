@@ -34,7 +34,7 @@ public class EmpException {
 		{
 			emp.checkSalary(salary);
 		}
-		catch(Exception e)
+		catch(EmployeeException e)
 		{
 			System.out.println(e);
 		}

@@ -18,7 +18,7 @@ class Employee
 	}
 	void validation()
 	{
-		if((firstName.isBlank() && lastName.isBlank()) || (firstName.isBlank()) || (lastName.isBlank()))
+		if((firstName.isEmpty() && lastName.isEmpty()) || (firstName.isEmpty()) || (lastName.isEmpty()))
 		{
 			throw new NullPointerException("Entry missing");
 		}

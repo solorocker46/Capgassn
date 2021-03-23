@@ -26,6 +26,7 @@ public class CreateThreadDemo1 {
 		B b = new B();
 		Thread t = new Thread(b);
 		t.start();
+		
 	}
 
 }

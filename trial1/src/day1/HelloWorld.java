@@ -9,6 +9,6 @@ public class HelloWorld {
 		int a = 5, b;
 		b = a++ + --a + a++ - ++a;
 		System.out.println(b);
+		
 	}
-
 }
