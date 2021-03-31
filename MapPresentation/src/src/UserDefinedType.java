@@ -11,10 +11,31 @@ class Car
 		this.company = company;
 		this.color = color;
 	}
-	@Override
-	public String toString() {
-		return "Car [id=" + id + ", company=" + company + ", color=" + color + "]";
+	
+	public int getId() {
+		return id;
 	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getCompany() {
+		return company;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -24,6 +45,7 @@ class Car
 		result = prime * result + id;
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -47,7 +69,11 @@ class Car
 			return false;
 		return true;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Car [id=" + id + ", company=" + company + ", color=" + color + "]";
+	}
 }
 public class UserDefinedType {
 
@@ -55,15 +81,16 @@ public class UserDefinedType {
 		// TODO Auto-generated method stub
 		Map<Car, Double> map = new HashMap<>();
 		map.put(new Car(1, "Mercedes Benz", "Black"), 6278000.00);
-		map.put(new Car(2, "Audi", "Cherry red"), 3500000.00);
+		map.put(new Car(2, "Audi", "Red"), 3500000.00);
 		map.put(new Car(3, "Renault Duster", "Orange"), 849000.00);
+		map.put(new Car(3, "Renault Duster", "Orange"), 900000.00);
 		System.out.println(map);
-		System.out.println("=========================To access keys==================================");
+		System.out.println("=========================To access keys using keySet()==================================");
 		for(Car key : map.keySet())
 		{
 			System.out.println(key);
 		}
-		System.out.println("=========================To get values==================================");
+		System.out.println("=========================To get values using values()==================================");
 		for(Double value : map.values())
 		{
 			System.out.println(value);
@@ -72,6 +99,22 @@ public class UserDefinedType {
 		for(Map.Entry<Car, Double> entry : map.entrySet())
 		{
 			System.out.println(entry.getKey()+" "+entry.getValue());
+		}
+		System.out.println("To print details of the car which is black colored");
+		for(Car key : map.keySet())
+		{
+			if(key.getColor().equalsIgnoreCase("black"))
+			{
+				System.out.println("Car name = "+key.getCompany()+" and car color = "+key.getColor());
+			}
+		}
+		for(Map.Entry<Car, Double> entry : map.entrySet())
+		{
+			if(entry.getKey().getCompany().equalsIgnoreCase("Renault Duster"))
+			{
+				entry.setValue(entry.getValue() * 1.1);
+				System.out.println("New price of renault duster = "+entry.getValue());
+			}
 		}
 	}
 
