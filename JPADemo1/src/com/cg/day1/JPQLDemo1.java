@@ -1,31 +1,29 @@
 package com.cg.day1;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
-public class StudentClient {
+public class JPQLDemo1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("s");
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
-		Student s = new Student();
-		s.setId(14);
-		s.setName("Sushma");
-		s.setDept("CSE");
-		em.persist(s);
+		Query q = em.createQuery("select s from Student s");
+		List l = q.getResultList();
+		System.out.println(l);
 		
-		Student s1 = new Student();
-		s1.setId(15);
-		s1.setName("Sneha MJ");
-		s1.setDept("CSE");
-		em.persist(s);
-		em.persist(s1);
-		System.out.println("Record inserted .... ");
+		System.out.println("Using typed query");
+		
+		TypedQuery<Student> q1 = em.createQuery("select s from Student s", Student.class);
+		List<Student> ll = q1.getResultList();
 		em.getTransaction().commit();
-		em.close();
 	}
 
 }
