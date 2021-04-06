@@ -14,6 +14,14 @@ public class BookDao implements IBookDao {
 	public BookDao() {
 		super();
 		em = JPAUtil.getEntityManager();
+		/*em.getTransaction().begin();
+		Book b = new Book();
+		b.setId(108);
+		b.setAuthor("Demi James");
+		b.setTitle("Everything on Android");
+		b.setPrice(500);
+		em.persist(b);
+		em.getTransaction().commit();*/
 	}
 
 	@Override
