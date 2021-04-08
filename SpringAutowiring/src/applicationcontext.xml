@@ -22,6 +22,7 @@ The below mentioned lines are equivalent to this
  <property name="name" value="Ramesh"></property>
  
  </bean>
+ 
  <!-- By constructor -->
  <!-- <bean id="emp" class="com.cg.entity.Employee" autowire="constructor">
  <property name="name" value="Ramesh"></property>
@@ -30,7 +31,10 @@ The below mentioned lines are equivalent to this
  
  -->
  <!-- By name -->
- <!--  <bean id="emp" class="com.cg.entity.Employee" autowire="byName">
+ <!--  
+ <bean id="addr" class="com.cg.entity.Address">
+ </bean>
+ <bean id="emp" class="com.cg.entity.Employee" autowire="byName">
  <property name="name" value="Ramesh"></property>
  
  </bean>

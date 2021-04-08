@@ -4,7 +4,10 @@ public class Employee {
 	String name;
 	Address addr;
 	Vehicle vehicle;
-	
+	public Employee()
+	{
+		
+	}
 	public Employee(Address addr, Vehicle vehicle) {
 		super();
 		this.addr = addr;
@@ -21,6 +24,9 @@ public class Employee {
 	}
 	public void setAddr(Address addr) {
 		this.addr = addr;
+	}
+	public void setVehicle(Vehicle vehicle) {
+		this.vehicle = vehicle;
 	}
 	public void displayDetails()
 	{

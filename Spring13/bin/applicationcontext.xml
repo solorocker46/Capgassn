@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+
+<bean id="emp" class="com.cg.entity.Employee">
+<property name="employeeId" value="1"></property>
+<property name="employeeName" value="Sushma"></property>
+<property name="salary" value="90000"></property>
+</bean>
+
+<bean id="emp1" class="com.cg.entity.Employee">
+<property name="employeeId" value="2"></property>
+<property name="employeeName" value="Akash"></property>
+<property name="salary" value="78000"></property>
+</bean>
+
+<bean id="emp2" class="com.cg.entity.Employee">
+<property name="employeeId" value="3"></property>
+<property name="employeeName" value="Sid"></property>
+<property name="salary" value="100000"></property>
+</bean>
+  
+<bean id="sbu" class="com.cg.entity.SBU">
+<property name="sbuCode" value="10"></property>
+<property name="sbuName" value="FS"></property>
+<property name="sbuHead" value="Jayant"></property>
+<property name="empList">
+<list>
+<ref bean="emp"/>
+<ref bean="emp1"/>
+<ref bean="emp2"/>
+</list>
+</property>
+</bean>
+
+</beans>  
