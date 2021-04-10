@@ -11011,3 +11011,15 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-07 21:56:22.875
 !MESSAGE executing callback sts4.classpath.HmzSBUYc SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-08 08:35:05.001
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.HmzSBUYc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-08 08:35:05.003
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.HmzSBUYc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-08 08:35:05.004
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-08 08:35:05.004
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.HmzSBUYc => OK
